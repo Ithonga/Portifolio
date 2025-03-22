@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import { BeatLoader } from "react-spinners";
 
 function ProgrammingNewsKenya() {
   const [articles, setArticles] = useState([]);
@@ -8,7 +9,7 @@ function ProgrammingNewsKenya() {
   useEffect(() => {
     const fetchNews = async () => {
       const apiKey = import.meta.env.VITE_NEWSDATA_API_KEY; // Store API key in .env
-      const url = `https://newsdata.io/api/1/latest?country=us&category=technology&size=5&q=ai&apikey=${apiKey}`;
+      const url = `https://newsdata.io/api/1/latest?country=us&category=technology&size=3&q=ai&apikey=${apiKey}`;
 
       try {
         const response = await fetch(url);
@@ -32,12 +33,17 @@ function ProgrammingNewsKenya() {
 
       {articles.length === 0 ? (
         <p className="text-center text-gray-500">
-          Loading Tech News.<br></br>No articles available.
+          Loading Tech News.{" "}
+          <BeatLoader color="#ef4444" size={30} className="text-center" />
+          <br></br>No articles available.
         </p>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => (
-            <div key={index} className="shadow-lg h-fit rounded- overflow-hidden">
+            <div
+              key={index}
+              className="shadow-lg h-fit rounded- overflow-hidden"
+            >
               <img
                 src={article.image_url || "/default-news.jpg"}
                 alt={article.title || "News Image"}
