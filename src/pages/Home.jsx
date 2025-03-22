@@ -8,10 +8,12 @@ import Divider from "../Components/Divider";
 import ProgressBar from "../Components/ProgressBar";
 import Footer from "../Components/Footer";
 import News from "../API's/News";
+import SplashCursor from "../Components/Animation_Motion/SplashCursor";
 
 function Home() {
   return (
     <>
+    <SplashCursor />
       <div className="pt-[50px] md:pt-[90px]">
         {/* this is a text animation from reactbit.dev */}
         <TextPressure
@@ -34,11 +36,11 @@ function Home() {
             <About />
             <Divider title={"Services"} />
             <Services />
-            <Divider title={'Achievements'}/>
+            {/* <Divider title={'Achievements'}/> */}
             <Divider title={'Blog'}/>
             <News/>
-            <Divider title={''}/>
-            <Divider title={''}/>
+            {/* <Divider title={''}/> */}
+            {/* <Divider title={''}/> */}
           </div>
           <div className="hidden md:block">
             <ProfilePic />
