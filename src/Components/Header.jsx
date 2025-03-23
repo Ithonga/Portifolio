@@ -25,9 +25,11 @@ function Header() {
 
   return (
     <div className="flex flex-wrap items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
-      <div className="flex w-[90px] md:h-[90px] bg-black">
-        <img src="/logo.png" alt="logo" className="p-7 items-center" />
-      </div>
+      <Link to="/">
+        <div className="flex w-[90px] md:h-[90px] bg-black">
+          <img src="/logo.png" alt="logo" className="p-7 items-center" />
+        </div>
+      </Link>
       <div className="md:hidden">
         <button onClick={toggleMenu}>
           {isOpen ? (
