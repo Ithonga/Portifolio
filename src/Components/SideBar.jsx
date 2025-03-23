@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div>
-      <div className="w-[50px] md:w-[90px] h-full border-r-[1px] border-black fixed flex flex-col justify-around items-center md:mt-[90px] bg-white sm:mt-[50px]">
+      <div className="w-[50px] md:w-[90px] h-full border-r-[1px] border-black fixed flex flex-col justify-around items-center mt-[90px] bg-white sm:mt-[50px]">
         <h2 className="-rotate-90 tracking-widest">HOMEPAGE</h2>
         <div className="flex flex-col gap-7 mb-10 text-[20px]">
           <Link to={"https://github.com/Ithonga"} target="_blank ">
