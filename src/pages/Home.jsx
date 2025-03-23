@@ -13,7 +13,7 @@ import SplashCursor from "../Components/Animation_Motion/SplashCursor";
 function Home() {
   return (
     <>
-    <SplashCursor />
+    {/* <SplashCursor /> */}
       <div className="pt-[120px] md:pt-[90px]">
         {/* this is a text animation from reactbit.dev */}
         <TextPressure
