@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <div className="flex items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
-      <div className="h-[50px] w-[50px] md:w-[90px] md:h-[90px] bg-black">
+      <div className="flex w-[90px] md:h-[90px] bg-black">
         <img src="./logo.png" alt="logo" className="p-7 items-center" />
       </div>
       <div className="hidden md:flex gap-14 items-center">
