@@ -21,9 +21,24 @@ function Services() {
     },
     {
       id: 3,
+      title: Details.REACT_NATIVE,
+      description: Details.REACT_NATIVE_DESCRIPTION,
+      logo: "./mobile.webp",
+      link: "/skills",
+      level: "Still Learning",
+    },
+    {
+      id: 4,
       title: Details.BACKEND,
       description: Details.BACKEND_DESCRIPTION,
       logo: "./backend.jpg",
+      link: "/skills",
+    },
+    {
+      id: 5,
+      title: Details.SEO,
+      description: Details.SEO_DESCRIPTION,
+      logo: "./seo.jpg",
       link: "/skills",
     },
   ];
@@ -40,8 +55,9 @@ function Services() {
           </div>
           <h2 className="mt-5 font-bold">{item.title}</h2>
           <h2 className="text-gray-400">{item.description.slice(0, 100)}...</h2>
+          {/* <h2 className="p-2 bg-red-600 rounded-full animate-bounce text-white">{item.level}</h2> */}
           <Link to={item.link}>
-            <IoArrowForwardOutline className="bg-red-500 p-3 text-[44px] rounded-full text-white cursor-pointer hover:scale-110 transition-all ease-in-out" />
+            <IoArrowForwardOutline className="bg-red-500 p-3 text-[44px] animate-bounce rounded-full text-white cursor-pointer hover:scale-110 transition-all ease-in-out" />
           </Link>
         </div>
       ))}

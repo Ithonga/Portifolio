@@ -8,7 +8,7 @@ function ProgrammingNewsKenya() {
   const [error, setError] = useState(null);
 
   // Function to introduce a delay
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -16,11 +16,12 @@ function ProgrammingNewsKenya() {
       if (!apiKey) {
         console.error("API Key is missing. Check your .env file.");
         setError("API Key is missing. Please configure the environment.");
+        setLoading(false);
         return;
       }
 
       const url = `https://newsdata.io/api/1/latest?country=ke&category=technology&size=3&apikey=${apiKey}`;
-      
+
       let attempts = 3; // Number of retry attempts
       let success = false;
 
@@ -28,9 +29,10 @@ function ProgrammingNewsKenya() {
         try {
           setLoading(true);
           setError(null);
-          
+
           const response = await fetch(url);
-          if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
+          if (!response.ok)
+            throw new Error(`HTTP Error! Status: ${response.status}`);
 
           const data = await response.json();
           if (data.results && Array.isArray(data.results)) {
@@ -51,7 +53,7 @@ function ProgrammingNewsKenya() {
       }
 
       if (!success) {
-        setError("Unable to fetch news after multiple attempts.");
+        setError("Unable to fetch news after multiple attempts.😔😭");
       }
 
       setLoading(false);
@@ -67,9 +69,27 @@ function ProgrammingNewsKenya() {
       </h1>
 
       {loading ? (
-        <p className="text-center text-gray-500">
-          Loading Tech News... <BeatLoader color="#ef4444" size={30} />
-        </p>
+        <>
+          <p className="text-center text-gray-500">
+            Loading Tech News... <BeatLoader color="#ef4444" size={30} />
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3].map((index) => (
+              <div
+                key={index}
+                className="shadow-lg h-fit rounded-lg overflow-hidden animate-pulse bg-gray-200"
+              >
+                <div className="h-56 w-full bg-gray-300"></div>
+                <div className="p-4 space-y-3">
+                  <div className="h-4 bg-gray-400 rounded w-3/4"></div>
+                  <div className="h-3 bg-gray-400 rounded w-1/2"></div>
+                  <div className="h-3 bg-gray-400 rounded w-full"></div>
+                  <div className="h-10 bg-gray-400 rounded w-1/3"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : articles.length === 0 ? (
@@ -77,7 +97,10 @@ function ProgrammingNewsKenya() {
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => (
-            <div key={index} className="shadow-lg h-fit rounded- overflow-hidden">
+            <div
+              key={index}
+              className="shadow-lg h-fit rounded-lg overflow-hidden"
+            >
               <img
                 src={article.image_url || "/default-news.jpg"}
                 alt={article.title || "News Image"}
@@ -86,10 +109,18 @@ function ProgrammingNewsKenya() {
               />
               <div className="p-4">
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>{article.pubDate ? moment(article.pubDate).format("MMMM D, YYYY") : "Unknown Date"}</span>
+                  <span>
+                    {article.pubDate
+                      ? moment(article.pubDate).format("MMMM D, YYYY")
+                      : "Unknown Date"}
+                  </span>
                   <span>{article.source_id || "Unknown Source"}</span>
                 </div>
-                <a href={article.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <h2 className="text-xl font-semibold mt-2 hover:text-red-500">
                     {article.title?.slice(0, 50) || "No Title"}...
                   </h2>
