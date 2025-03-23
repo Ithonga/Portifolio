@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { CgMenuRight } from "react-icons/cg";
+import { MdClose } from "react-icons/md";
 
 function Header() {
   const email = "ithongadev@gmail.com";
@@ -20,6 +22,9 @@ function Header() {
     <div className="flex items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
       <div className="flex w-[90px] md:h-[90px] bg-black">
         <img src="./logo.png" alt="logo" className="p-7 items-center" />
+      </div>
+      <div className="md:hidden">
+        <CgMenuRight className="md:hidden w-[90px] h-[90px] p-7 items-center" />
       </div>
       <div className="hidden md:flex gap-14 items-center">
         {menu.map((item) => (
