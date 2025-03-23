@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
     <SplashCursor />
-      <div className="pt-[50px] md:pt-[90px]">
+      <div className="pt-[120px] md:pt-[90px]">
         {/* this is a text animation from reactbit.dev */}
         <TextPressure
           text="Ronnie Ithonga"
@@ -30,7 +30,7 @@ function Home() {
           className=""
         />
         <div className="ml-[50px] md:ml-[90px] grid grid-cols-1 md:grid-cols-3">
-          <div className="mt-[50px] md:col-span-2 md:mt-[90px]">
+          <div className=" col-span-2">
             {/* <Introduction /> */}
             <Divider title={"AboutMe"} />
             <About />

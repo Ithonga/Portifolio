@@ -1,9 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import { MdClose } from "react-icons/md";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const email = "ithongadev@gmail.com";
   const subject = encodeURIComponent("Frontend Development Inquiry");
   const body = encodeURIComponent(
@@ -18,13 +19,23 @@ function Header() {
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="flex items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
+    <div className="flex flex-wrap items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
       <div className="flex w-[90px] md:h-[90px] bg-black">
-        <img src="./logo.png" alt="logo" className="p-7 items-center" />
+        <img src="/logo.png" alt="logo" className="p-7 items-center" />
       </div>
       <div className="md:hidden">
-        <CgMenuRight className="md:hidden w-[90px] h-[90px] p-7 items-center" />
+        <button onClick={toggleMenu}>
+          {isOpen ? (
+            <MdClose className=" w-[90px] h-[90px] p-7 items-center" />
+          ) : (
+            <CgMenuRight className=" w-[90px] h-[90px] p-7 items-center" />
+          )}
+        </button>
       </div>
       <div className="hidden md:flex gap-14 items-center">
         {menu.map((item) => (
@@ -33,7 +44,7 @@ function Header() {
             to={item.link}
             className={({ isActive }) =>
               ` cursor-pointer hover:text-red-400 font-medium ${
-                isActive ? "text-red-400" :  ""
+                isActive ? "text-red-400" : ""
               }`
             }
           >
@@ -41,6 +52,24 @@ function Header() {
           </NavLink>
         ))}
       </div>
+      {isOpen && (
+        <div className="flex basis-full flex-col gap-4 items-center">
+          {menu.map((item) => (
+            <NavLink
+              onClick={toggleMenu}
+              key={item.id}
+              to={item.link}
+              className={({ isActive }) =>
+                ` cursor-pointer hover:text-red-400 font-medium ${
+                  isActive ? "text-red-400" : ""
+                }`
+              }
+            >
+              <h2>{item.name}</h2>
+            </NavLink>
+          ))}
+        </div>
+      )}
       <div className="hidden md:w-[90px] h-[90px] bg-red-500 md:flex justify-center items-center">
         <a href={mailLink} target="_blank" rel="noopener noreferrer">
           <svg
