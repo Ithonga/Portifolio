@@ -73,20 +73,8 @@ function ProgrammingNewsKenya() {
                   </Link>
                   <div className="flex-col items-right ">
                     <h2 className="text-sm text-gray-700 max-w-[80px]">
-                      By: {article.source_name || "Unknown Author"}
+                       {article.source_name || "Unknown Author"}
                     </h2>
-
-                    <Link
-                      to={article.source_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={article.source_icon || "/default-news.jpg"}
-                        alt={article.title || "News Image"}
-                        className="h-8 w-fit object-cover transform transition duration-300 hover:scale-105"
-                      />
-                    </Link>
                   </div>
                 </div>
               </div>
