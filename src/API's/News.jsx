@@ -1,25 +1,60 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
-import { Link } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
 
 function ProgrammingNewsKenya() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Function to introduce a delay
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   useEffect(() => {
     const fetchNews = async () => {
-      const apiKey = import.meta.env.VITE_NEWSDATA_API_KEY; // Store API key in .env
-      const url = `https://newsdata.io/api/1/latest?country=us&category=technology&size=3&q=ai&apikey=${apiKey}`;
-
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        if (data.results) {
-          setArticles(data.results);
-        }
-      } catch (error) {
-        console.error("Error fetching news:", error);
+      const apiKey = import.meta.env.VITE_NEWSDATA_API_KEY;
+      if (!apiKey) {
+        console.error("API Key is missing. Check your .env file.");
+        setError("API Key is missing. Please configure the environment.");
+        return;
       }
+
+      const url = `https://newsdata.io/api/1/latest?country=ke&category=technology&size=3&apikey=${apiKey}`;
+      
+      let attempts = 3; // Number of retry attempts
+      let success = false;
+
+      for (let i = 0; i < attempts; i++) {
+        try {
+          setLoading(true);
+          setError(null);
+          
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
+
+          const data = await response.json();
+          if (data.results && Array.isArray(data.results)) {
+            setArticles(data.results);
+            success = true;
+            break; // Exit loop if successful
+          } else {
+            throw new Error("Unexpected API response format.");
+          }
+        } catch (err) {
+          console.error(`Attempt ${i + 1}: Error fetching news -`, err.message);
+          setError("Failed to load news. Retrying...");
+
+          if (i < attempts - 1) {
+            await delay(2000); // Wait 2 seconds before retrying
+          }
+        }
+      }
+
+      if (!success) {
+        setError("Unable to fetch news after multiple attempts.");
+      }
+
+      setLoading(false);
     };
 
     fetchNews();
@@ -31,49 +66,49 @@ function ProgrammingNewsKenya() {
         Latest Tech News
       </h1>
 
-      {articles.length === 0 ? (
+      {loading ? (
         <p className="text-center text-gray-500">
-          Loading Tech News.{" "}
-          <BeatLoader color="#ef4444" size={30} className="text-center" />
-          <br></br>No articles available.
+          Loading Tech News... <BeatLoader color="#ef4444" size={30} />
         </p>
+      ) : error ? (
+        <p className="text-center text-red-500">{error}</p>
+      ) : articles.length === 0 ? (
+        <p className="text-center text-gray-500">No articles available.</p>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => (
-            <div
-              key={index}
-              className="shadow-lg h-fit rounded- overflow-hidden"
-            >
+            <div key={index} className="shadow-lg h-fit rounded- overflow-hidden">
               <img
                 src={article.image_url || "/default-news.jpg"}
                 alt={article.title || "News Image"}
                 className="h-56 w-full object-cover transform transition duration-300 hover:scale-105"
+                onError={(e) => (e.target.src = "/default-news.jpg")}
               />
               <div className="p-4">
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>{moment(article.pubDate).format("MMMM D, YYYY")}</span>
+                  <span>{article.pubDate ? moment(article.pubDate).format("MMMM D, YYYY") : "Unknown Date"}</span>
                   <span>{article.source_id || "Unknown Source"}</span>
                 </div>
-                <Link to={article.link} target="_blank">
+                <a href={article.link} target="_blank" rel="noopener noreferrer">
                   <h2 className="text-xl font-semibold mt-2 hover:text-red-500">
                     {article.title?.slice(0, 50) || "No Title"}...
                   </h2>
-                </Link>
+                </a>
                 <p className="text-gray-700 mt-2">
                   {article.description?.slice(0, 90) || "No Description"}...
                 </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <Link
-                    to={article.link}
+                  <a
+                    href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white bg-red-500 p-2 rounded-lg hover:bg-red-600"
                   >
                     Read More
-                  </Link>
-                  <div className="flex-col items-right ">
+                  </a>
+                  <div className="flex-col items-right">
                     <h2 className="text-sm text-gray-700 max-w-[80px]">
-                       {article.source_name || "Unknown Author"}
+                      {article.source_name || "Unknown Author"}
                     </h2>
                   </div>
                 </div>

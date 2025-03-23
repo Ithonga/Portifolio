@@ -1,6 +1,6 @@
 import React from "react";
-import Ribbons from "../Components/Animation_Motion/Ribbons";
-import SplashCursor from "../Components/Animation_Motion/SplashCursor";
+
+
 function Skills() {
   return (
     <>

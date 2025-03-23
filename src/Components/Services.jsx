@@ -30,7 +30,7 @@ function Services() {
   return (
     <div className="sm:grid mb-2 md:grid grid-cols-3 justify-around mt-16">
       {serviceList.map((item) => (
-        <div className="text-center flex flex-col w-500 justify-center items-center gap-4 p-2 shadow-lg m-2">
+        <div key={item.id} className="text-center flex flex-col w-500 justify-center items-center gap-4 p-2 shadow-lg m-2">
           <div className="bg-red-500 rounded-full w-[80px] h-[80px]">
             <img
               src={item.logo}
