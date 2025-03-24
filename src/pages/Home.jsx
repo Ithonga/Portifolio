@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TextPressure from "../Components/Animation_Motion/TextPressure";
 import Introduction from "../Components/Introduction";
 import About from "../Components/About";
@@ -11,6 +11,12 @@ import News from "../API's/News";
 import SplashCursor from "../Components/Animation_Motion/SplashCursor";
 
 function Home() {
+  // Reset scroll position to top when navigating to a new route
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <>
     {/* <SplashCursor /> */}
