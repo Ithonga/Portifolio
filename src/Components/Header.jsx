@@ -56,14 +56,14 @@ function Header() {
         ))}
       </div>
       {isOpen && (
-        <div className="flex basis-full flex-col gap-4 items-center">
+        <div className="flex basis-full divide-y w-full flex-col gap-4 items-center py-3">
           {menu.map((item) => (
             <NavLink
               onClick={toggleMenu}
               key={item.id}
               to={item.link}
               className={({ isActive }) =>
-                ` cursor-pointer hover:text-red-400 font-medium ${
+                ` cursor-pointer w-full text-center  hover:text-red-400 font-medium ${
                   isActive ? "text-red-400" : ""
                 }`
               }
