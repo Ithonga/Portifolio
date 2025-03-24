@@ -10,21 +10,21 @@ function Services() {
       title: Details.UI_UX,
       description: Details.UI_UX_DESCRIPTION,
       logo: "./design.webp",
-      link: "/skills",
+      link: "/services",
     },
     {
       id: 2,
       title: Details.FRONTEND,
       description: Details.FRONTEND_DESCRIPTION,
       logo: "./frontend.jpg",
-      link: "/skills",
+      link: "/services",
     },
     {
       id: 3,
       title: Details.REACT_NATIVE,
       description: Details.REACT_NATIVE_DESCRIPTION,
       logo: "./mobile.webp",
-      link: "/skills",
+      link: "/services",
       level: "Still Learning",
     },
     {
@@ -32,14 +32,14 @@ function Services() {
       title: Details.BACKEND,
       description: Details.BACKEND_DESCRIPTION,
       logo: "./backend.jpg",
-      link: "/skills",
+      link: "/services",
     },
     {
       id: 5,
       title: Details.SEO,
       description: Details.SEO_DESCRIPTION,
       logo: "./seo.jpg",
-      link: "/skills",
+      link: "/services",
     },
   ];
   return (
