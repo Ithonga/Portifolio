@@ -18,10 +18,7 @@ function Sidebar() {
           <Link to={"https://github.com/Ithonga"} target="_blank ">
             <IoLogoGithub className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
           </Link>
-          <Link
-            to={"https://www.linkedin.com/in/ronnie-ithonga/"}
-            target="_blank "
-          >
+          <Link>
             <IoLogoLinkedin className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
           </Link>
           <Link to={"https://www.instagram.com/_ronni.e.e/"} target="_blank ">
