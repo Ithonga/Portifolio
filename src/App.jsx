@@ -6,6 +6,7 @@ import Sidebar from "./Components/SideBar";
 import Skills from "./pages/Skills";
 import Project from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 import Footer from "./Components/Footer";
 import { ScrollTop } from 'primereact/scrolltop';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer/>
     </>

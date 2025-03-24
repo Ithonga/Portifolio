@@ -17,6 +17,7 @@ function Header() {
     { id: 2, name: "SKILLS", link: "/skills" },
     { id: 3, name: "PROJECTS", link: "/projects" },
     { id: 4, name: "CONTACT", link: "/contact" },
+    { id: 5, name: "SERVICES", link: "/services" },
   ];
 
   const toggleMenu = () => {
