@@ -20,7 +20,7 @@ function ProgrammingNewsKenya() {
         return;
       }
 
-      const url = `https://newsdata.io/api/1/latest?country=ke&category=technology&size=3&apikey=${apiKey}`;
+      const url = `https://newsdata.io/api/1/latest?country=ke&size=3&category=technology&apikey=${apiKey}`;
 
       let attempts = 3; // Number of retry attempts
       let success = false;
@@ -102,7 +102,7 @@ function ProgrammingNewsKenya() {
               className="shadow-lg h-fit rounded-lg overflow-hidden"
             >
               <img
-                src={article.image_url || "/default-news.jpg"}
+                src={article.image_url || "/backLogo.jpg"}
                 alt={article.title || "News Image"}
                 className="h-56 w-full object-cover transform transition duration-300 hover:scale-105"
                 onError={(e) => (e.target.src = "/default-news.jpg")}
@@ -133,7 +133,7 @@ function ProgrammingNewsKenya() {
                     href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white bg-red-500 p-2 rounded-lg hover:bg-red-600"
+                    className="text-white bg-red-500 animate-bounce p-2 rounded-lg hover:bg-red-600"
                   >
                     Read More
                   </a>
