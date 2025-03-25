@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 function Projects() {
   // Reset scroll position to top when navigating to a new route
@@ -42,14 +43,28 @@ function Projects() {
     //       </div>
     //   </div>
     // </div>
-    <div className="flex flex-col pt-[90px] ml-[50px] md:ml-[90px] h-screen">
-      <img
-        src="/ui-ux.jpg"
-        className="w-full fixed h-[50%] object-cover opacity-40"
-      />
-      <div className="flex flex-col items-center justify-center w-screen h-[50%]">
-        <h2>hello world</h2>
-        <p>welcome to my portifolio</p>
+    <div className="pt-[90px] pl-[50px] md:pl-[90px]">
+      <div
+        className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
+        style={{ backgroundImage: "url('/projects.jpg')" }} // Replace with your image path
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="px-3 relative text-center"
+        >
+          <p className="text-yellow-400 uppercase tracking-wide text-sm">
+            Our Projects
+          </p>
+          <h1 className="text-2xl md:text-5xl font-bold">
+            Explore Our Diverse <br /> Portfolio Of Projects
+          </h1>
+        </motion.div>
       </div>
     </div>
   );

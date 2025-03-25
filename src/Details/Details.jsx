@@ -24,7 +24,7 @@ export default {
     MOBILE_APPS: "Mobile Application Development",
     MOBILE_DESCRIPTION: "I specialize in developing high-performance cross-platform mobile applications using React Native. We create seamless, user-friendly experiences for both iOS and Android with a single codebase, ensuring cost-effectiveness and fast development cycles. My expertise lies in developing modern, responsive, and interactive web applications that truly reflect a brand's essence. Whether it's a portfolio, an e-commerce platform, or a custom web solution, I ensure every project is built with precision, creativity, and the latest technologies." ,
 
-    UI: "UI_UX Development",
+    UI: "UI_UX Design",
     UI_DESCRPTION: "I am passionate about crafting intuitive and visually engaging user experiences. With a strong focus on UI/UX design, I create sleek, user-friendly interfaces that enhance usability and accessibility. My approach combines aesthetics with functionality, ensuring seamless navigation and interactive designs that captivate users. From wireframing and prototyping to pixel-perfect implementation, I strive to build digital experiences that not only look great but also feel effortless to use.",
 
 };
