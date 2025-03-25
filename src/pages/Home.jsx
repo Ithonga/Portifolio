@@ -20,7 +20,7 @@ function Home() {
   return (
     <>
     {/* <SplashCursor /> */}
-      <div className="pt-[120px] md:pt-[90px]">
+      <div className="pt-[120px] md:pt-[90px] w-full">
         {/* this is a text animation from reactbit.dev */}
         <TextPressure
           text="Ronnie Ithonga"
