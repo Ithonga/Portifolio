@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Footer from "./Components/Footer";
 import { ScrollTop } from "primereact/scrolltop";
-import FadeContent from "./Components/Animation_Motion/CountUp";
+import FadeContent from "./Components/Animation_Motion/FadedContent";
 
 function App() {
   return (
