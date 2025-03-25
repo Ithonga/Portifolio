@@ -16,12 +16,12 @@ function App() {
     <>
       <Header />
       <Sidebar />
-      <FadeContent
+      {/* <FadeContent
         blur={true}
         duration={1000}
         easing="ease-out"
         initialOpacity={0}
-      >
+      > */}
         <ScrollTop className="w-[50px] h-[50px] bg-red-500 border-[1px] border-white rounded-full text-white" />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
         </Routes>
-      </FadeContent>
+      {/* </FadeContent> */}
       <Footer />
     </>
   );
