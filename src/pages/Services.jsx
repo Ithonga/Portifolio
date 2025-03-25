@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import Details from "../Details/Details";
+import { motion } from "framer-motion";
 
 function Services() {
   useEffect(() => {
@@ -9,13 +10,31 @@ function Services() {
 
   return (
     <div className="pt-[90px] ml-[50px] md:ml-[90px]">
-      <div className="flex items-center justify-center flex-col mt-10 md:px-10">
-        <h2 className="text-[20px] text-gray-400 font-bold">SERVICES</h2>
-        <h2 className="text-[24px] md:text-[40px] font-semibold md:w-[600px] text-center">
-          The service we offer is designed to meet your business needs.
-        </h2>
+    <div
+        className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
+        style={{ backgroundImage: "url('/services.avif')" }} // Replace with your image path
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="px-3 relative text-center"
+        >
+          <p className="text-yellow-400 uppercase tracking-wide text-sm">
+            SERVICES
+          </p>
+          <h1 className="text-2xl md:text-5xl font-bold">
+          The services we offer are designed <br/>to meet your business needs.
+          </h1>
+        </motion.div>
+      </div>
+      <div className="flex items-center justify-center flex-col md:px-10">
         {/* WEB DEVELOPMENT ONLY */}
-        <div className="flex-col p-4  md:p-[60px] flex md:flex-row md:gap-10 items-center justify-between text-left">
+        <div className="flex-col px-4  md:p-[60px] flex md:flex-row md:gap-10 items-center justify-between text-left">
           <img
             src="/web-development.jpg"
             alt=""
