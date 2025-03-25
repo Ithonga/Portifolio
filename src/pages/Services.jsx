@@ -41,10 +41,10 @@ function Services() {
             className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
           />
           <div className="flex flex-col">
-            <h2 className="text-center md:text-left text-[24px] md:text-[40px] font-bold">
+            <h2 className="  text-[24px] md:text-[40px] font-bold">
               {Details.WEB_SERVICES}
             </h2>
-            <h2 className=" text-[15px] w-full md:w-full text-center md:text-[20px] text-gray-500 font-medium mb-4 md:text-left">
+            <h2 className=" text-[15px] w-full md:w-full  md:text-[20px] text-gray-500 font-medium mb-4 ">
               {Details.WEB_DESCRIPTION}
             </h2>
             <div className="flex gap-2 items-center mb-3 ">
@@ -82,10 +82,10 @@ function Services() {
             className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
           />
           <div className="flex flex-col">
-            <h2 className="text-center md:text-left text-[24px] md:text-[40px] font-bold">
+            <h2 className="  text-[24px] md:text-[40px] font-bold">
               {Details.MOBILE_APPS}
             </h2>
-            <h2 className=" text-[15px] w-full md:w-full text-center md:text-[20px] text-gray-500 font-medium mb-4 md:text-left">
+            <h2 className=" text-[15px] w-full md:w-full  md:text-[20px] text-gray-500 font-medium mb-4 ">
               {Details.MOBILE_DESCRIPTION}
             </h2>
             <div className="flex gap-2 items-center mb-3 ">
@@ -123,10 +123,10 @@ function Services() {
             className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
           />
           <div className="flex flex-col">
-            <h2 className="text-center md:text-left text-[24px] md:text-[40px] font-bold">
+            <h2 className="  text-[24px] md:text-[40px] font-bold">
               {Details.UI}
             </h2>
-            <h2 className=" text-[15px] w-full md:w-full text-center md:text-[20px] text-gray-500 font-medium mb-4 md:text-left">
+            <h2 className=" text-[15px] w-full md:w-full  md:text-[20px] text-gray-500 font-medium mb-4 ">
               {Details.UI_DESCRPTION}
             </h2>
             <div className="flex gap-2 items-center mb-3 ">
