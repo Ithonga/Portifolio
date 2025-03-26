@@ -137,7 +137,7 @@ function Projects() {
               className="w-full h-[300px] md:h-[400px] object-cover transition-all duration-500 ease-in-out object-top hover:object-[1%_100%]"
             />
 
-            <div className="p-4 hover:bg-red-500 transition-all ease-in-out hover:text-white flex flex-col  gap-3">
+            <div className="p-4 transition-all ease-in-out flex flex-col  gap-3">
               <h2 className="text-[20px] font-bold">{project.title}</h2>
               <p className=" text-[16px]">{project.description}</p>
               <a

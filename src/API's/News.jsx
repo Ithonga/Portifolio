@@ -20,7 +20,7 @@ function ProgrammingNewsKenya() {
         return;
       }
 
-      const url = `https://newsdata.io/api/1/latest?country=us&size=3&category=technology&apikey=${apiKey}`;
+      const url = `https://newsdata.io/api/1/latest?country=us&size=5&category=technology&apikey=${apiKey}`;
 
       let attempts = 3; // Number of retry attempts
       let success = false;

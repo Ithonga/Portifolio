@@ -14,10 +14,9 @@ function Header() {
 
   const menu = [
     { id: 1, name: "HOME", link: "/" },
-    { id: 2, name: "SKILLS", link: "/skills" },
-    { id: 3, name: "PROJECTS", link: "/projects" },
-    { id: 4, name: "CONTACT", link: "/contact" },
-    { id: 5, name: "SERVICES", link: "/services" },
+    { id: 2, name: "PROJECTS", link: "/projects" },
+    { id: 3, name: "CONTACT", link: "/contact" },
+    { id: 4, name: "SERVICES", link: "/services" },
   ];
 
   const toggleMenu = () => {
@@ -56,14 +55,14 @@ function Header() {
         ))}
       </div>
       {isOpen && (
-        <div className="flex basis-full divide-y w-full flex-col gap-4 items-center py-3">
+        <div className="flex basis-full flex-col gap-4 items-center py-3">
           {menu.map((item) => (
             <NavLink
               onClick={toggleMenu}
               key={item.id}
               to={item.link}
               className={({ isActive }) =>
-                ` cursor-pointer w-full text-center  hover:text-red-400 font-medium ${
+                ` cursor-pointer w-full text-right p-3 hover:text-red-400 font-medium ${
                   isActive ? "text-red-400" : ""
                 }`
               }

@@ -25,7 +25,6 @@ function App() {
         <ScrollTop className="w-[50px] h-[50px] bg-red-500 border-[1px] border-white rounded-full text-white" />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />

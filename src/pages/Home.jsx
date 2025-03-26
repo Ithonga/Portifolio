@@ -9,6 +9,7 @@ import ProgressBar from "../Components/ProgressBar";
 import Footer from "../Components/Footer";
 import News from "../API's/News";
 import SplashCursor from "../Components/Animation_Motion/SplashCursor";
+import Skills from "./Skills";
 
 function Home() {
   // Reset scroll position to top when navigating to a new route
@@ -43,6 +44,8 @@ function Home() {
             <Divider title={"Services"} />
             <Services />
             {/* <Divider title={'Achievements'}/> */}
+            <Divider title={"Skills"}/>
+            <Skills/>
             <Divider title={'Blog'}/>
             <News/>
             {/* <Divider title={''}/> */}
