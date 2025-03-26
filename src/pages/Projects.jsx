@@ -7,17 +7,24 @@ function Projects() {
     {
       title: "Crystal Digital",
       description:
-        "I have built various websites and web applications using HTML, CSS, JavaScript, and React.",
+        "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
       image: "/crystal-digital.png",
       link: "https://crystaldigital.framer.ai",
     },
     {
       title: "JM Meat Supply",
       description:
-        "I have built mobile applications using React Native and Flutter.",
+        "FreshCuts Meat delivers high-quality, farm-fresh meat straight to your doorstep. Enjoy premium cuts of beef, chicken, lamb, and more with fast and reliable delivery.",
       image: "/jm-meat-supply.png",
       link: "https://jmmeatsupply.com/",
     },
+    {
+      title: "Twende Application",
+      description:
+        "Twende is a React Native application designed to help users explore Kenya’s top travel destinations. It integrates APIs like Amadeus, Skyscanner, Viator, and OpenTripMap to provide real-time flight, hotel, and attraction details.",
+        image: "/twende.png",
+      link: "/projects",
+    }
   ];
   // Reset scroll position to top when navigating to a new route
   useEffect(() => {
@@ -117,11 +124,12 @@ function Projects() {
           </div>
         </div>
       </div>
+      <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">Featured and Ongoing Projects</h2>
       <div className="flex-row grid md:grid-cols-3 p-3 md:p-[42px] gap-8">
         {projectData.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col gap- w-full items-center shadow-lg overflow-hidden"
+            className="flex flex-col w-full items-center shadow-lg overflow-hidden"
           >
             <img
               src={project.image}
@@ -129,10 +137,14 @@ function Projects() {
               className="w-full h-[300px] md:h-[400px] object-cover transition-all duration-500 ease-in-out object-top hover:object-[1%_100%]"
             />
 
-            <div className="p-4 hover:bg-red-500 transition-all ease-in-out hover:text-white">
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <a href={project.link} target="_black" className="text-yellow-400">
+            <div className="p-4 hover:bg-red-500 transition-all ease-in-out hover:text-white flex flex-col  gap-3">
+              <h2 className="text-[20px] font-bold">{project.title}</h2>
+              <p className=" text-[16px]">{project.description}</p>
+              <a
+                href={project.link}
+                target="_black"
+                className="text-white p-2 rounded-lg bg-blue-500 self-baseline"
+              >
                 VIEW DEMO
               </a>
             </div>
