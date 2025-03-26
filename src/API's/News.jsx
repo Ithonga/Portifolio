@@ -105,7 +105,7 @@ function ProgrammingNewsKenya() {
                 src={article.image_url || "/backLogo.jpg"}
                 alt={article.title || "News Image"}
                 className="h-56 w-full object-cover transform transition duration-300 hover:scale-105"
-                onError={(e) => (e.target.src = "/default-news.jpg")}
+                onError={(e) => (e.target.src = "/backLogo.jpg")}
               />
               <div className="p-4">
                 <div className="flex justify-between text-sm text-gray-500">
