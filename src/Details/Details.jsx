@@ -6,7 +6,7 @@ export default {
     UI_UX: "UI/UX Design",
     UI_UX_DESCRIPTION: "Designing intuitive and user-friendly interfaces that enhance the overall user experience. We focus on usability, accessibility, and modern design principles to create visually appealing and functional designs.",
 
-    FRONTEND: "Frontend Development",
+    FRONTEND: "Web Development",
     FRONTEND_DESCRIPTION: "Crafting interactive and responsive user interfaces that provide a seamless and engaging user experience. We specialize in modern frameworks like React, Vue, and Angular to build dynamic web applications.",
 
     BACKEND: "Backend Development",
