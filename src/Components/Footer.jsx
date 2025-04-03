@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="ml-[50px] md:ml-[90px] border-t-[1px] border-black bottom-0 h-fit px-10 py-6 flex flex-col gap-4 mt-1">
-      <Link to="/">
+      <a href="/">
         <img src="/logoblack.png" alt="Logo" className="w-[50px] " />
-      </Link>
+      </a>
       <div className="flex-row gap-10 md:flex justify-between ">
         <div className="mb-8 flex-row gap-8 md:flex justify-between">
           <div className="mb-8 flex flex-col gap-2">
             <h2 className="text-gray-400">Email</h2>
+            <h2 className="font-medium">info@ronnieithonga.com</h2>
             <h2 className="font-medium">ithongadev@gmail.com</h2>
-            <h2 className="font-medium">ndwarurony004@gmail.com</h2>
           </div>
           <div className="flex flex-col gap-2 ">
             <h2 className="text-gray-400">Phone Number</h2>
@@ -31,21 +31,24 @@ function Footer() {
             Creating modern, responsive, and Interactive user experiences.
           </h2>
           <div className="flex gap-4 text-[30px] ">
-            <Link to={"https://github.com/Ithonga"} target="_blank ">
+            <a href={"https://github.com/Ithonga"} target="_blank ">
               <IoLogoGithub className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
-            </Link>
-            <Link>
+            </a>
+            <a>
               <IoLogoLinkedin className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
-            </Link>
-            <Link to={"https://www.instagram.com/_ronni.e.e/"} target="_blank ">
+            </a>
+            <a href={"https://www.instagram.com/_ronni.e.e/"} target="_blank ">
               <IoLogoInstagram className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
-            </Link>
-            <Link to={"https://x.com/Ronni_eN"} target="_blank ">
+            </a>
+            <a href={"https://x.com/Ronni_eN"} target="_blank ">
               <IoLogoTwitter className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
-            </Link>
-            <Link to={"https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1"} target="_blank ">
+            </a>
+            <a
+              href={"https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1"}
+              target="_blank "
+            >
               <IoLogoTiktok className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

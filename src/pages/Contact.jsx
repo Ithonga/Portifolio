@@ -42,8 +42,8 @@ function ContactPage() {
           <div className="w-full h-[300px] flex flex-col gap-3 items-center justify-center shadow-lg p-5 rounded-lg bg-slate-100">
             <IoMailOpen className="text-[50px]" />
             <h2 className="font-bold text-[20px]">Email</h2>
+            <p>info@ronnieithonga.com</p>
             <p>ithongadev@gmail.com</p>
-            <p>ndwarurony004@gmail.com</p>
           </div>
         </div>
         <Contact />

@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const email = "ithongadev@gmail.com";
+  const email = "info@ronnieithonga.com";
   const subject = encodeURIComponent("Frontend Development Inquiry");
   const body = encodeURIComponent(
     "Hello,\n\nI came across your portfolio and I'm interested in working with you.\nCould we discuss potential collaboration or projects?\n\nLooking forward to your response.\n\nBest regards,"
