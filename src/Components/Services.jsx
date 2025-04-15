@@ -7,18 +7,19 @@ function Services() {
   const serviceList = [
     {
       id: 1,
-      title: Details.UI_UX,
-      description: Details.UI_UX_DESCRIPTION,
-      logo: "./design.webp",
-      link: "/services",
-    },
-    {
-      id: 2,
       title: Details.FRONTEND,
       description: Details.FRONTEND_DESCRIPTION,
       logo: "./frontend.jpg",
       link: "/services",
     },
+    {
+      id: 2,
+      title: Details.UI_UX,
+      description: Details.UI_UX_DESCRIPTION,
+      logo: "./design.webp",
+      link: "/services",
+    },
+    
     // {
     //   id: 3,
     //   title: Details.REACT_NATIVE,

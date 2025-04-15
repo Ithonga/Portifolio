@@ -10,10 +10,19 @@ import {
 import { Link } from "react-router-dom";
 
 function Sidebar() {
+  // shows current date, time and month
+  const today = new Date();
+  const fullDate = today.toLocaleDateString("en-US", {
+    weekday: "long",
+    // year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div>
       <div className="w-[50px] md:w-[90px] h-full border-r-[1px] border-black fixed flex flex-col justify-around items-center mt-[90px] bg-white sm:mt-[50px]">
-        <h2 className="-rotate-90 tracking-widest">HOMEPAGE</h2>
+        <h2 className="-rotate-90 tracking-widest font-semibold">{fullDate}</h2>
         <div className="flex flex-col gap-7 mb-10 text-[20px]">
           <a href={"https://github.com/Ithonga"} target="_blank ">
             <IoLogoGithub className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />

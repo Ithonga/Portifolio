@@ -34,11 +34,11 @@ function Home() {
           textColor="#000000"
           strokeColor="#ff0000"
           minFontSize={36}
-          className=""
+          className="hidden md:flex"
         />
         <div className="ml-[50px] md:ml-[90px] grid grid-cols-1 md:grid-cols-3">
           <div className=" col-span-2">
-            {/* <Introduction /> */}
+            <Introduction />
             <Divider title={"AboutMe"} />
             <About />
             <Divider title={"Services"} />

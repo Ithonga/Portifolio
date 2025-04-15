@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoCall, IoMailOpen } from "react-icons/io5";
 import Contact from "../Components/Contact";
+import { Helmet } from "react-helmet";
 
 function ContactPage() {
   // Reset scroll position to top when navigating to a new route
@@ -9,7 +10,13 @@ function ContactPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pt-[90px] pl-[50px] md:pl-[90px]">
+    <>
+    <Helmet>
+      <title>Contact Us</title>
+      <meta name="description" content="Have questions or want to work with us? Reach out through our contact form, email, or phone — we're here to help and excited to connect with you." />
+      <link rel="canonical" href="/contact"/>
+    </Helmet>
+      <div className="pt-[90px] pl-[50px] md:pl-[90px]">
       <div
         className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/contact.webp')" }}
@@ -49,6 +56,7 @@ function ContactPage() {
         <Contact />
       </div>
     </div>
+    </>
   );
 }
 

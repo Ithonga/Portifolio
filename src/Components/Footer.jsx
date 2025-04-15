@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="ml-[50px] md:ml-[90px] border-t-[1px] border-black bottom-0 h-fit px-10 py-6 flex flex-col gap-4 mt-1">
+    <div className="ml-[50px] md:ml-[90px] border-t-[1px] border-black bottom-0 h-fit px-2 md:px-10 py-6 flex flex-col gap-4 mt-1">
       <a href="/">
         <img src="/logoblack.png" alt="Logo" className="w-[50px] " />
       </a>

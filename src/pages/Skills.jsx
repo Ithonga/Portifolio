@@ -45,7 +45,7 @@ function Skills() {
   return (
     <div className="p-3">
       <h2 className="text-[24px] font-bold py-4">My Technical Level</h2>
-      <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {technicalSkills.map((skill, index) => (
           <div
             key={index}
