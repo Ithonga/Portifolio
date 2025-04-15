@@ -12,6 +12,13 @@ function Projects() {
       link: "https://crystal.ronnieithonga.com",
     },
     {
+      title: "ronnieithonga.com",
+      description:
+        "",
+      image: "/Crystal-Digital1.png",
+      link: "https://ronnieithonga.com",
+    },
+    {
       title: "Crystal Digital",
       description:
         "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
