@@ -93,6 +93,7 @@ function AppContent() {
           `}
         </script>
       </Helmet>
+
       {/* Show Header and Sidebar only for valid routes */}
       {isValidRoute && <Header />}
       {isValidRoute && <Sidebar />}
