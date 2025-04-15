@@ -15,7 +15,7 @@ function Projects() {
       title: "ronnieithonga.com",
       description:
         "",
-      image: "/Crystal-Digital1.png",
+      image: "/ronnie-ithonga.png",
       link: "https://ronnieithonga.com",
     },
     {
@@ -139,11 +139,11 @@ function Projects() {
         </div>
       </div>
       <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">Featured and Ongoing Projects</h2>
-      <div className="flex-row grid md:grid-cols-3 p-3 md:p-[42px] gap-8">
+      <div className="flex-row grid md:grid-cols-5 p-3 md:p-[42px] gap-8">
         {projectData.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col w-full items-center shadow-lg overflow-hidden"
+            className="flex flex-col w-full h-[450px] items-center shadow-lg overflow-hidden"
           >
             <img
               src={project.image}
@@ -151,9 +151,9 @@ function Projects() {
               className="w-full h-[300px] md:h-[400px] object-cover transition-all duration-500 ease-in-out object-top hover:object-[1%_100%]"
             />
 
-            <div className="p-4 transition-all ease-in-out flex flex-col  gap-3">
+            <div className="p-4 transition-all ease-in-out flex flex-col gap-3">
               <h2 className="text-[20px] font-bold">{project.title}</h2>
-              <p className=" text-[16px]">{project.description}</p>
+              <p className=" text-[16px]">{project.description.slice(0, 80)}...</p>
               <a
                 href={project.link}
                 target="_black"
