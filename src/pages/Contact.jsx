@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 function ContactPage() {
   // Reset scroll position to top when navigating to a new route
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.To(0, 0);
   }, []);
   return (
     <>

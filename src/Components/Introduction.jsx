@@ -14,7 +14,7 @@ function Introduction() {
       <div className="w-[160px] h-[160px] rounded-full overflow-hidden border-[5px] border-red-500">
         <img
           src="./profile-pic.jpg"
-          alt="logo"
+          alt="Profile Picture"
           className="w-full h-full object-cover object-top"
         />
       </div>

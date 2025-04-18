@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./Components/Header";
@@ -14,6 +14,11 @@ import { Helmet } from "react-helmet";
 
 // Main app content with routing and layout control
 function AppContent() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const location = useLocation(); // Get the current route path
 
   // Define valid route paths that should show Header, Sidebar, and Footer

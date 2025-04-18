@@ -5,22 +5,30 @@ import About from "../Components/About";
 import Services from "../Components/Services";
 import ProfilePic from "../Components/ProfilePic";
 import Divider from "../Components/Divider";
-import ProgressBar from "../Components/ProgressBar";
-import Footer from "../Components/Footer";
 import News from "../API's/News";
-import SplashCursor from "../Components/Animation_Motion/SplashCursor";
 import Skills from "./Skills";
 
 function Home() {
   // Reset scroll position to top when navigating to a new route
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
 
 
   return (
     <>
-    {/* <SplashCursor /> */}
       <div className="pt-[120px] md:pt-[90px] w-full">
         {/* this is a text animation from reactbit.dev */}
         <TextPressure
