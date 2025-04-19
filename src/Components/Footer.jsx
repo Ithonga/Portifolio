@@ -17,12 +17,12 @@ function Footer() {
       <div className="flex-row gap-10 md:flex justify-between ">
         <div className="mb-8 flex-row gap-8 md:flex justify-between">
           <div className="mb-8 flex flex-col gap-2">
-            <h2 className="text-gray-400">Email</h2>
+            <h2 className="text-lg font-bold mb-4">Email</h2>
             <h2 className="font-medium">info@ronnieithonga.com</h2>
             <h2 className="font-medium">ithongadev@gmail.com</h2>
           </div>
           <div className="flex flex-col gap-2 ">
-            <h2 className="text-gray-400">Phone Number</h2>
+            <h2 className="text-lg font-bold mb-4">Phone Number</h2>
             <h2 className="font-medium">+(254) (0) 741 994 264</h2>
           </div>
         </div>
