@@ -27,11 +27,11 @@ function Header() {
     <div className="flex flex-wrap items-center justify-between border-b-[1px] fixed w-full bg-white z-10">
       <Link to="/">
         <div className="flex w-[90px] md:h-[90px] bg-black">
-          <img src="/logo.png" alt="logo" className="p-7 items-center" />
+          <img src="/logo.webp" alt="logo" className="p-7 items-center" />
         </div>
       </Link>
       <div className="md:hidden">
-        <button onClick={toggleMenu}>
+        <button onClick={toggleMenu} alt="menu" >
           {isOpen ? (
             <MdClose className=" w-[90px] h-[90px] p-7 items-center" />
           ) : (
@@ -45,8 +45,8 @@ function Header() {
             key={item.id}
             to={item.link}
             className={({ isActive }) =>
-              ` cursor-pointer hover:text-red-400 font-medium ${
-                isActive ? "text-red-400" : ""
+              ` cursor-pointer hover:text-red-500 font-medium ${
+                isActive ? "text-red-500" : ""
               }`
             }
           >
@@ -62,8 +62,8 @@ function Header() {
               key={item.id}
               to={item.link}
               className={({ isActive }) =>
-                ` cursor-pointer w-full text-right p-3 hover:text-red-400 font-medium ${
-                  isActive ? "text-red-400" : ""
+                ` cursor-pointer w-full text-right p-3 hover:text-red-500 font-medium ${
+                  isActive ? "text-red-500" : ""
                 }`
               }
             >
