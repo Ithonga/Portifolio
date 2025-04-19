@@ -9,7 +9,7 @@ function Services() {
       id: 1,
       title: Details.FRONTEND,
       description: Details.FRONTEND_DESCRIPTION,
-      logo: "./frontend.jpg",
+      logo: "./frontend.webp",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ function Services() {
       id: 5,
       title: Details.SEO,
       description: Details.SEO_DESCRIPTION,
-      logo: "./seo.jpg",
+      logo: "./seo.webp",
     },
   ];
   return (
@@ -50,9 +50,9 @@ function Services() {
             />
           </div>
           <h2 className="mt-5 font-bold">{item.title}</h2>
-          <h2 className="text-gray-400">{item.description.slice(0, 100)}...</h2>
+          <h2 className="text-gray-700">{item.description.slice(0, 100)}...</h2>
           {/* <h2 className="p-2 bg-red-600 rounded-full animate-bounce text-white">{item.level}</h2> */}
-          <Link to="/services">
+          <Link to="/services" alt="services link">
             {/* <IoArrowForwardOutline className="bg-red-500 p-3 text-[44px] animate-bounce rounded-full text-white cursor-pointer hover:scale-110 transition-all ease-in-out" /> */}
             <h2 className=" text-blue-400 cursor-pointer p-3 hover:scale-110 transition-all ease-in-out">View More...</h2>
           </Link>

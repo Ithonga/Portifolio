@@ -13,7 +13,7 @@ function Introduction() {
       </h2>
       <div className="w-[160px] h-[160px] rounded-full overflow-hidden border-[5px] border-red-500">
         <img
-          src="./profile-pic.jpg"
+          src="./profile-pic.webp"
           alt="Profile Picture"
           className="w-full h-full object-cover object-top"
         />
