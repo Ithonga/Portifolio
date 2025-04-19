@@ -78,7 +78,8 @@ function Projects() {
       <div className="pt-[90px] pl-[50px] md:pl-[90px]">
         <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('/projects.webp' alt='Projects' )" }} // Replace with your image path
+          style={{ backgroundImage: "url('/projects.webp')" }} // Replace with your image path
+          aria-label="Projects"
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>

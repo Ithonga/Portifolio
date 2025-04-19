@@ -24,6 +24,7 @@ function ContactPage() {
         <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
           style={{ backgroundImage: "url('/contact.webp')" }}
+          aria-label="Contact Us"
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>

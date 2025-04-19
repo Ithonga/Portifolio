@@ -29,6 +29,7 @@ function Services() {
         <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
           style={{ backgroundImage: "url('/services.webp' alt='services')" }}
+          aria-label="Services"
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
