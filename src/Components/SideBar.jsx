@@ -29,31 +29,31 @@ function Sidebar() {
               target="_blank"
               alt="Github"
             >
-              <IoLogoGithub className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
+              <IoLogoGithub alt="Github" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
             <Link
               to={"https://www.instagram.com/_ronni.e.e/"}
               alt="Linkedin"
               target="_blank "
             >
-              <IoLogoLinkedin className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
+              <IoLogoLinkedin alt="Linkedin" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
             <Link
               to={"https://www.instagram.com/_ronni.e.e/"}
               target="_blank"
               alt="Instagram"
             >
-              <IoLogoInstagram className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
+              <IoLogoInstagram alt="Instagram" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
             <Link to={"https://x.com/Ronni_eN"} target="_blank" alt="Twitter">
-              <IoLogoTwitter className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
+              <IoLogoTwitter alt="Twitter" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
             <Link
               to={"https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1"}
               target="_blank "
               alt="Tiktok"
             >
-              <IoLogoTiktok className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
+              <IoLogoTiktok alt="Tiktok" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
         </div>
       </div>
