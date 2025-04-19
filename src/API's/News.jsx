@@ -1,23 +1,9 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { BeatLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 function ProgrammingNewsKenya() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -110,24 +96,17 @@ function ProgrammingNewsKenya() {
       ) : articles.length === 0 ? (
         <p className="text-center text-gray-500">No articles available.</p>
       ) : (
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => (
-            <motion.div
-              variants={item}
+            <div
               key={index}
               className="shadow-lg h-fit rounded-lg overflow-hidden"
             >
               <img
-                src={article.image_url || "/backLogo.jpg"}
+                src={article.image_url || "/backLogo.webp"}
                 alt={article.title || "News Image"}
                 className="h-56 w-full object-cover transform transition duration-300 hover:scale-105"
-                onError={(e) => (e.target.src = "/backLogo.jpg")}
+                onError={(e) => (e.target.src = "/backLogo.webp")}
               />
               <div className="p-4">
                 <div className="flex justify-between text-sm text-gray-500">
@@ -151,14 +130,12 @@ function ProgrammingNewsKenya() {
                   {article.description?.slice(0, 90) || "No Description"}...
                 </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <a
-                    href={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white bg-red-500 animate-bounce p-2 rounded-lg hover:bg-red-600"
-                  >
-                    Read More
-                  </a>
+                  
+                  <Link to={article.link} target="_blank" rel="noopener noreferrer">
+                    <h2 className=" text-red-600 cursor-pointer p-3 hover:scale-110 transition-all ease-in-out">
+                      Read More...
+                    </h2>
+                  </Link>
                   <div className="flex-col items-right">
                     <h2 className="text-sm text-gray-700 max-w-[80px]">
                       {article.source_name || "Unknown Author"}
@@ -166,9 +143,9 @@ function ProgrammingNewsKenya() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       )}
     </div>
   );
