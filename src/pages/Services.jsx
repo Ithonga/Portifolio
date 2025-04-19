@@ -21,13 +21,14 @@ function Services() {
           name="keywords"
           content="Web Developer Nairobi, Web Developer Kikuyu, Frontend Developer, React, React Native, UI/UX Design, SEO, Graphics Design, Mobile App Development, Web Development, High-Performance Websites, User Experience, Digital Solutions"
         />
-        <link rel="canonical" href="/services" />
+        <link rel="canonical" href="https://ronnieithonga.com/services" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
 
       <div className="pt-[90px] ml-[50px] md:ml-[90px]">
         <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('/services.avif' alt='services')" }}
+          style={{ backgroundImage: "url('/services.webp' alt='services')" }}
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -52,7 +53,7 @@ function Services() {
           {/* WEB DEVELOPMENT ONLY */}
           <div className="flex-col px-4  md:p-[60px] flex md:flex-row md:gap-10 items-center justify-between text-left">
             <img
-              src="/web-development.jpg"
+              src="/web-development.webp"
               alt="web development"
               className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
             />
@@ -93,7 +94,7 @@ function Services() {
           {/* MOBILE DEVELOPMENT ONLY */}
           <div className="flex-col p-4  md:p-[60px] flex md:flex-row-reverse md:gap-10 items-center justify-between text-left">
             <img
-              src="/mobile-development.avif"
+              src="/mobile-development.webp"
               alt="mobile development"
               className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
             />
@@ -134,7 +135,7 @@ function Services() {
           {/* UI/UX DESIGN ONLY */}
           <div className="flex-col p-4 mt-8 md:p-[60px] flex md:flex-row md:gap-10 items-center justify-between text-left">
             <img
-              src="/ui-ux.jpg"
+              src="/ui-ux.webp"
               alt="ui/ux design"
               className="w-full  md:w-[400px] md:h-[400px] rounded-[30px]"
             />
