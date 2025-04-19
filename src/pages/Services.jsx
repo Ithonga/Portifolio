@@ -28,7 +28,7 @@ function Services() {
       <div className="pt-[90px] ml-[50px] md:ml-[90px]">
         <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('/services.webp' alt='services')" }}
+          style={{ backgroundImage: "url('/services.webp')" }}
           aria-label="Services"
         >
           {/* Overlay */}
