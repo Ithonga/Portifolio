@@ -37,13 +37,7 @@ function AppContent() {
       {isValidRoute && <Header />}
       {isValidRoute && <Sidebar />}
 
-      {/* Wrap the routed content in a fade animation */}
-      <FadeContent
-        blur={true}
-        duration={1000}
-        easing="ease-out"
-        initialOpacity={0}
-      >
+
         {/* Scroll to top button */}
         <ScrollTop className="w-[50px] h-[50px] bg-red-500 border-[1px] border-white rounded-full text-white" />
 
@@ -58,7 +52,6 @@ function AppContent() {
           {/* Catch-all route for undefined paths (404) */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </FadeContent>
 
       {/* Show Footer only for valid routes */}
       {isValidRoute && <Footer />}
