@@ -1,6 +1,7 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Ronnie Ithonga | Frontend Developer", 
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,5 +16,8 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "description": "I'm Ronnie, a passionate Frontend Developer specializing in React, React Native, UI/UX design, SEO, and Graphics Design. I create stunning, high-performance websites and mobile apps that enhance user experience.",
+  "orientation": "portrait-primary",
+  "lang": "en"
 }
