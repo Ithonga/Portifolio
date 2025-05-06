@@ -34,11 +34,11 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Ronnie Ithonga</title>
-        <meta
+        {/* <title>Ronnie Ithonga</title> */}
+        {/* <meta
           name="description"
           content="Explore our portfolio of projects showcasing creativity, technical expertise, and commitment to delivering top-notch results for our clients"
-        />
+        /> */}
         <link rel="canonical" href="https://ronnieithonga.com" />
         <meta name="robots" content="index, follow" />
       </Helmet>

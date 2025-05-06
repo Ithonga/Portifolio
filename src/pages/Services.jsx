@@ -12,7 +12,7 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Services--Ronnie Ithonga</title>
+        <title>Ronnie Ithonga | Services</title>
         <meta
           name="description"
           content="The services we offer are designed to meet your business needs."

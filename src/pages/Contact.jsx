@@ -12,7 +12,7 @@ function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Us</title>
+        <title>Ronnie Ithonga | Contact Us</title>
         <meta
           name="description"
           content="Have questions or want to work with us? Reach out through our contact form, email, or phone — we're here to help and excited to connect with you."

@@ -66,7 +66,7 @@ function Projects() {
   return (
     <>
       <Helmet>
-        <title>Projects--Ronnie Ithonga</title>
+        <title>Ronnie Ithonga | Projects</title>
         <meta
           name="description"
           content="Explore our portfolio of projects showcasing creativity, technical expertise, and commitment to delivering top-notch results for our clients"
