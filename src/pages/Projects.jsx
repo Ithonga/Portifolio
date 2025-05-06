@@ -12,6 +12,13 @@ function Projects() {
 
   const projectData = [
     {
+      title: "luxhotels.com",
+      description:
+        "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
+      image: "/kgr.png",
+      link: "https://kitonga-garden-resort.vercel.app",
+    },
+    {
       title: "crystaldigital.co.ke",
       description:
         "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
@@ -76,16 +83,55 @@ function Projects() {
       </Helmet>
 
       <div className="pt-[90px] pl-[50px] md:pl-[90px]">
-        <div
+      <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">
+          Featured and Ongoing Projects
+        </h2>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="flex-row grid sm:grid-cols-3 md:grid-cols-5 p-3 md:p-[42px] gap-8"
+        >
+          {projectData.map((project, index) => (
+            <motion.div
+              key={index}
+              variants={item}
+              // whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="flex flex-col w-full h-[400px] items-center shadow-lg overflow-hidden"
+            >
+              <img
+                src={project.image}
+                alt="project image"
+                className="w-full h-1/2 object-cover transition-all duration-500 ease-in-out object-top hover:object-[1%_100%]"
+              />
+
+              <div className="w-full h-full  p-2 transition-all ease-in-out flex flex-col gap-3">
+                <h2 className="text-[20px] font-bold">{project.title}</h2>
+                <p className=" text-[16px]">
+                  {project.description.slice(0, 80)}...
+                </p>
+                <a
+                  href={project.link}
+                  target="_black"
+                  className="text-white p-1 rounded-lg bg-blue-500 self-baseline"
+                >
+                  Preview
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+        {/* <div
           className=" relative w-full h-[400px] flex items-center justify-center bg-cover bg-center text-white"
           style={{ backgroundImage: "url('/projects.webp')" }} // Replace with your image path
           aria-label="Projects"
-        >
+        > */}
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
 
           {/* Text Content */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -99,8 +145,8 @@ function Projects() {
             <h1 className="text-2xl md:text-5xl font-bold">
               Explore Our Diverse <br /> Portfolio Of Projects
             </h1>
-          </motion.div>
-        </div>
+          </motion.div> */}
+        {/* </div> */}
         <div className="h-fit p-3 md:p-[42px]">
           <div className="flex-row md:flex h-full gap-8">
             <motion.div
@@ -204,45 +250,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">
-          Featured and Ongoing Projects
-        </h2>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex-row grid sm:grid-cols-3 md:grid-cols-5 p-3 md:p-[42px] gap-8"
-        >
-          {projectData.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              // whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="flex flex-col w-full h-[400px] items-center shadow-lg overflow-hidden"
-            >
-              <img
-                src={project.image}
-                alt="project image"
-                className="w-full h-1/2 object-cover transition-all duration-500 ease-in-out object-top hover:object-[1%_100%]"
-              />
-
-              <div className="w-full h-full  p-2 transition-all ease-in-out flex flex-col gap-3">
-                <h2 className="text-[20px] font-bold">{project.title}</h2>
-                <p className=" text-[16px]">
-                  {project.description.slice(0, 80)}...
-                </p>
-                <a
-                  href={project.link}
-                  target="_black"
-                  className="text-white p-1 rounded-lg bg-blue-500 self-baseline"
-                >
-                  Preview
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        
       </div>
     </>
   );
