@@ -68,7 +68,7 @@ function Footer() {
               <IoLogoGithub alt="Github" className="cursor-pointer hover:scale-110 transition-all ease-in-out hover:text-red-500" />
             </Link>
             <Link
-              to={"https://www.instagram.com/_ronni.e.e/"}
+              to={"https://www.linkedin.com/in/ronnie-ithonga-7b33a2364"}
               alt="Linkedin"
               target="_blank "
             >
