@@ -27,7 +27,7 @@
     <!-- Responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Tags  -->
-    <title>Ronnie Ithonga</title>
+    <title>Ronnie Ithonga | Web Developer</title>
     <!-- Meta Description -->
     <meta
       name="description"
@@ -60,38 +60,60 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ronnie",
-        "jobTitle": "Frontend Developer",
-        "url": "https://ronnieithonga.com",
-        "image": "https://ronnieithonga.com/android-chrome-512x512.png",
-        "sameAs": [
-          "https://www.instagram.com/_ronni.e.e/",
-          "https://github.com/Ithonga",
-          "https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance / Self-employed"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "IBM Full Stack Developer Program (Coursera)"
-        },
-        "knowsAbout": [
-          "React",
-          "Frontend Development",
-          "Backend Development",
-          "React Native",
-          "UI/UX Design",
-          "SEO",
-          "Graphics Design",
-          "Corel"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "KE"
-        }
+        "@graph": [
+          {
+            "@type": "SiteNavigationElement",
+            "name": ["Home", "Services", "Projects", "Contact"],
+            "url": [
+              "https://ronnieithonga.com",
+              "https://ronnieithonga.com/services",
+              "https://ronnieithonga.com/projects",
+              "https://ronnieithonga.com/contact"
+            ]
+          },
+          {
+            "@type": "Person",
+            "name": "Ronnie",
+            "jobTitle": "Frontend Developer",
+            "email": "ithongadev@gmail.com",
+            "telephone": "+254 741 994 264",
+            "url": "https://ronnieithonga.com",
+            "image": "https://ronnieithonga.com/android-chrome-512x512.png",
+            "sameAs": [
+              "https://www.instagram.com/_ronni.e.e/",
+              "https://github.com/Ithonga",
+              "https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1"
+            ],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Freelance / Self-employed"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "IBM Full Stack Developer Program (Coursera)"
+            },
+            "knowsAbout": [
+              "React",
+              "Frontend Development",
+              "Backend Development",
+              "React Native",
+              "UI/UX Design",
+              "SEO",
+              "Graphics Design",
+              "Corel"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "KE"
+            },
+            "potentialAction": {
+              "@type": "ViewAction",
+              "target": "https://ronnieithonga.com/projects",
+              "name": "View Projects"
+            }
+            
+          }
+        ]
       }
     </script>
 
