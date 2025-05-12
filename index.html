@@ -63,7 +63,7 @@
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://ronnieithonga.com",
+            "@id": "https://ronnieithonga.com/#website",
             "url": "https://ronnieithonga.com",
             "name": "Ronnie Ithonga",
             "description": "I'm Ronnie, a passionate Frontend Developer specializing in React, React Native, SEO, and Graphics Design. I create stunning, high-performance websites and mobile apps that enhance user experience.",
@@ -81,7 +81,7 @@
           },
           {
             "@type": "Person",
-            "@id": "https://ronnieithonga.com/",
+            "@id": "https://ronnieithonga.com/#person",
             "name": "Ronnie Ithonga",
             "jobTitle": "Frontend Developer",
             "email": "mailto:ithongadev@gmail.com",
@@ -154,6 +154,37 @@
             ]
           },
           {
+            "@type": "WebPage",
+            "@id": "https://ronnieithonga.com/#webpage",
+            "url": "https://ronnieithonga.com",
+            "name": "Home",
+            "description": "Welcome to Ronnie Ithonga's home page - showcasing services, projects, and contact information."
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ronnieithonga.com/services/#service",
+            "serviceType": "Web Development, Front-End Development, UI/UX Design",
+            "provider": {
+              "@id": "https://ronnieithonga.com/#person"
+            },
+            "url": "https://ronnieithonga.com/services",
+            "description": "Professional web development and design services offered by Ronnie Ithonga."
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://ronnieithonga.com/projects/#collectionpage",
+            "url": "https://ronnieithonga.com/projects",
+            "name": "Projects",
+            "description": "A portfolio of web development and design projects created by Ronnie Ithonga."
+          },
+          {
+            "@type": "ContactPage",
+            "@id": "https://ronnieithonga.com/contact/#contactpage",
+            "url": "https://ronnieithonga.com/contact",
+            "name": "Contact",
+            "description": "Get in touch with Ronnie Ithonga for collaborations, projects, or inquiries."
+          },
+          {
             "@type": "BreadcrumbList",
             "itemListElement": [
               {
@@ -184,7 +215,6 @@
           },
           {
             "@type": "SiteNavigationElement",
-            "@id": "https://ronnieithonga.com",
             "name": "Home",
             "url": "https://ronnieithonga.com"
           },
@@ -206,6 +236,7 @@
         ]
       }
       </script>
+      
       
 
     <!-- Google tag (gtag.js) -->
