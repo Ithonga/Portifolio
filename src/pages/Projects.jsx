@@ -12,9 +12,15 @@ function Projects() {
 
   const projectData = [
     {
+      title: "thenganya.com",
+      description: "Matatu Culture.",
+      image: "/thenganya.png",
+      link: "https://thenganya.vercel.app",
+    },
+    {
       title: "luxhotels.com",
       description:
-        "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
+        "Luxury Hotels.",
       image: "/kgr.png",
       link: "https://kitonga-garden-resort.vercel.app",
     },
@@ -83,7 +89,7 @@ function Projects() {
       </Helmet>
 
       <div className="pt-[90px] pl-[50px] md:pl-[90px]">
-      <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">
+        <h2 className="text-[24px] md:text-[45px] font-bold p-3 md:p-[42px]">
           Featured and Ongoing Projects
         </h2>
         <motion.div
@@ -127,11 +133,11 @@ function Projects() {
           style={{ backgroundImage: "url('/projects.webp')" }} // Replace with your image path
           aria-label="Projects"
         > */}
-          {/* Overlay */}
-          {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
+        {/* Overlay */}
+        {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
 
-          {/* Text Content */}
-          {/* <motion.div
+        {/* Text Content */}
+        {/* <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -250,7 +256,6 @@ function Projects() {
             </div>
           </div>
         </div>
-        
       </div>
     </>
   );
