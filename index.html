@@ -62,31 +62,30 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "SiteNavigationElement",
-            "name": ["Home", "Services", "Projects", "Contact"],
-            "url": [
-              "https://ronnieithonga.com",
-              "https://ronnieithonga.com/services",
-              "https://ronnieithonga.com/projects",
-              "https://ronnieithonga.com/contact"
-            ]
-          },
-          {
             "@type": "WebSite",
-            "url": "https://www.ronnieithonga.com",
+            "@id": "https://ronnieithonga.com",
+            "url": "https://ronnieithonga.com",
+            "name": "Ronnie Ithonga",
+            "description": "I'm Ronnie, a passionate Frontend Developer specializing in React, React Native, SEO, and Graphics Design. I create stunning, high-performance websites and mobile apps that enhance user experience.",
             "sameAs": [
               "https://www.instagram.com/_ronni.e.e/",
               "https://github.com/Ithonga",
-              "https://www.tiktok.com/@ronni.e.e?_t=ZM-8uu2H5FsRBG&_r=1",
+              "https://www.tiktok.com/@ronni.e.e",
               "https://www.linkedin.com/in/ronnie-ithonga-7b33a2364"
-            ]
+            ],
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ronnieithonga.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
           },
           {
             "@type": "Person",
-            "name": "Ronnie",
+            "@id": "https://ronnieithonga.com/",
+            "name": "Ronnie Ithonga",
             "jobTitle": "Frontend Developer",
-            "email": "ithongadev@gmail.com",
-            "telephone": "+254 741 994 264",
+            "email": "mailto:ithongadev@gmail.com",
+            "telephone": "+254741994264",
             "url": "https://ronnieithonga.com",
             "worksFor": {
               "@type": "Organization",
@@ -110,11 +109,49 @@
               "@type": "PostalAddress",
               "addressCountry": "KE"
             },
-            "potentialAction": {
-              "@type": "ViewAction",
-              "target": "https://ronnieithonga.com/projects",
-              "name": "View Projects"
-            }
+            "sameAs": [
+              "https://www.instagram.com/_ronni.e.e/",
+              "https://github.com/Ithonga",
+              "https://www.tiktok.com/@ronni.e.e",
+              "https://www.linkedin.com/in/ronnie-ithonga-7b33a2364"
+            ],
+            "potentialAction": [
+              {
+                "@type": "ViewAction",
+                "target": "https://ronnieithonga.com/projects",
+                "name": "View Projects"
+              },
+              {
+                "@type": "ContactAction",
+                "target": "https://ronnieithonga.com/contact",
+                "name": "Contact Ronnie"
+              },
+              {
+                "@type": "SubscribeAction",
+                "target": "https://ronnieithonga.com/contact",
+                "name": "Subscribe to Newsletter"
+              },
+              {
+                "@type": "FollowAction",
+                "target": "https://twitter.com/Ronni_eN",
+                "name": "Follow Ronnie on Twitter"
+              },
+              {
+                "@type": "FollowAction",
+                "target": "https://www.linkedin.com/in/ronnie-ithonga-7b33a2364",
+                "name": "Follow Ronnie on LinkedIn"
+              },
+              {
+                "@type": "FollowAction",
+                "target": "https://www.instagram.com/_ronni.e.e/",
+                "name": "Follow Ronnie on Instagram"
+              },
+              {
+                "@type": "FollowAction",
+                "target": "https://www.tiktok.com/@ronni.e.e",
+                "name": "Follow Ronnie on TikTok"
+              }
+            ]
           },
           {
             "@type": "BreadcrumbList",
@@ -144,10 +181,32 @@
                 "item": "https://ronnieithonga.com/contact"
               }
             ]
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://ronnieithonga.com",
+            "name": "Home",
+            "url": "https://ronnieithonga.com"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Services",
+            "url": "https://ronnieithonga.com/services"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Projects",
+            "url": "https://ronnieithonga.com/projects"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Contact",
+            "url": "https://ronnieithonga.com/contact"
           }
         ]
       }
-    </script>
+      </script>
+      
 
     <!-- Google tag (gtag.js) -->
     <script
