@@ -97,7 +97,7 @@ function Projects() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex-row grid sm:grid-cols-3 md:grid-cols-5 p-3 md:p-[42px] gap-8"
+          className="grid sm:grid-cols-3 md:grid-cols-5 p-3 md:p-[42px] gap-8"
         >
           {projectData.map((project, index) => (
             <motion.div
