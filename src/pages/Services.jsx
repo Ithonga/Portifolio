@@ -79,9 +79,7 @@ function Services() {
               </div>
               <div className="flex gap-2 items-center mb-3">
                 <VscDebugBreakpointData className="text-[25px] " />
-                <h2 className="text-[15px] text-gray-500 font-medium">
-                  Customized design and development.
-                </h2>
+                <h2 className="text-[15px] text-gray-500 font-medium"></h2>
               </div>
               {/* <a
                 href=""

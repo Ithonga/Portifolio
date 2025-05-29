@@ -22,7 +22,7 @@ function AppContent() {
   const location = useLocation(); // Get the current route path
 
   // Define valid route paths that should show Header, Sidebar, and Footer
-  const validRoutes = ["/", "/projects", "/contact", "/services"];
+  const validRoutes = ["/", "/projects", "/contact"];
   const isValidRoute = validRoutes.includes(location.pathname); // Check if current path is valid
 
   return (
@@ -47,7 +47,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
+          {/* <Route path="/services" element={<Services />} /> */}
 
           {/* Catch-all route for undefined paths (404) */}
           <Route path="*" element={<NotFound />} />

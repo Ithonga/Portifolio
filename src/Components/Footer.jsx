@@ -41,12 +41,12 @@ function Footer() {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/services" className="relative inline-block group">
                 <span className="relative z-10">Services</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" className="relative inline-block group">
                 <span className="relative z-10">Contact Us</span>

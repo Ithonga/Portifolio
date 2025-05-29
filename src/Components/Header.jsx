@@ -15,7 +15,7 @@ function Header() {
   const menu = [
     { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "PROJECTS", link: "/projects" },
-    { id: 3, name: "SERVICES", link: "/services" },
+    // { id: 3, name: "SERVICES", link: "/services" },
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
 
