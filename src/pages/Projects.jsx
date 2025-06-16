@@ -13,14 +13,14 @@ function Projects() {
   const projectData = [
     {
       title: "thenganya.com",
-      description: "Matatu Culture.",
+      description: "Explore Kenya’s matatu culture on Thenganya.com — discover, list, and celebrate iconic matatus, routes, and SACCOs.",
       image: "/thenganya.png",
       link: "https://thenganya.vercel.app",
     },
     {
       title: "luxhotels.com",
       description:
-        "Luxury Hotels.",
+        "Discover comfort and sophistication at Lux Hotel. Enjoy stylish rooms, fine dining, rooftop views, and personalized service — perfect for both business and leisure stays.",
       image: "/kgr.png",
       link: "https://kitonga-garden-resort.vercel.app",
     },
@@ -29,7 +29,7 @@ function Projects() {
       description:
         "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
       image: "/Crystal-Digital1.webp",
-      link: "https://crystal.ronnieithonga.com",
+      link: "https://crystaldigital.co.ke",
     },
     {
       title: "ronnieithonga.com",
@@ -38,13 +38,7 @@ function Projects() {
       image: "/ronnie-ithonga.webp",
       link: "https://ronnieithonga.com",
     },
-    {
-      title: "crystaldigital.com",
-      description:
-        "Welcome to a world where visual storytelling means innovation, and creativity knows no bounds. From sleek logos that speak volumes to immersive web experiences.",
-      image: "/crystal-digital.webp",
-      link: "https://crystaldigital.framer.ai",
-    },
+
     {
       title: "jmmeatsupply.com",
       description:
@@ -57,7 +51,7 @@ function Projects() {
       description:
         "Twende is a React Native application designed to help users explore Kenya’s top travel destinations. It integrates APIs like Amadeus, Skyscanner, Viator, and OpenTripMap to provide real-time flight, hotel, and attraction details.",
       image: "/twende.webp",
-      link: "/projects",
+      link: "#",
     },
   ];
 
