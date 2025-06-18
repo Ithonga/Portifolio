@@ -27,12 +27,15 @@ function Contact() {
         icon: "success",
       });
     }
+    //resets form
+    event.target.reset();
   };
   return (
     <div className="m-2 bg-slate-100 shadow-lg rounded-lg p-5  md:w-1/2 ">
       <form onSubmit={onSubmit}>
         <h2 className="text-[24px] font-bold">Contact Us</h2>
         <div className="mt-[20px] flex flex-col">
+        <input type="hidden" name="subject" value="New Message from your Website" />
           <label>Full Name</label>
           <input
             name="name"

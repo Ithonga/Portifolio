@@ -14,14 +14,14 @@ function Projects() {
     {
       title: "thenganya.com",
       description: "Explore Kenya’s matatu culture on Thenganya.com — discover, list, and celebrate iconic matatus, routes, and SACCOs.",
-      image: "/thenganya.png",
+      image: "/thenganya.webp",
       link: "https://thenganya.vercel.app",
     },
     {
       title: "luxhotels.com",
       description:
         "Discover comfort and sophistication at Lux Hotel. Enjoy stylish rooms, fine dining, rooftop views, and personalized service — perfect for both business and leisure stays.",
-      image: "/kgr.png",
+      image: "/kgr.webp",
       link: "https://kitonga-garden-resort.vercel.app",
     },
     {

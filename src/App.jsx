@@ -5,11 +5,9 @@ import Header from "./Components/Header";
 import Sidebar from "./Components/SideBar";
 import Project from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Services from "./pages/Services";
 import Footer from "./Components/Footer";
 import NotFound from "./pages/NotFound"; // 404 page component
 import { ScrollTop } from "primereact/scrolltop";
-import FadeContent from "./Components/Animation_Motion/FadedContent";
 import { Helmet } from "react-helmet";
 
 // Main app content with routing and layout control
